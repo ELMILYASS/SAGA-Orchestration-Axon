@@ -67,11 +67,11 @@ public class OrderAggregate {
         orderEventsHandler.onCompleteOrderEvent(event);
     }
 
-    @EventSourcingH  this.orderId = event.getOrderId();
-        orderEventsHandler.onCancelOrderEvent(event);
-}andler
+    @EventSourcingHandler
     public void on(CancelOrderEvent event) {
-
+        this.orderId = event.getOrderId();
+        orderEventsHandler.onCancelOrderEvent(event);
+    }
 
     @EventSourcingHandler
     public void on(OrderCreateEvent event) {
